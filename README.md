@@ -1,8 +1,7 @@
 # Mars Rover Challenge
 
 # How to run
-open the project in terminal and run following command:
-npm install
+open the project in terminal and run following commands:
 
 // typescript conververter for all ts files
 1) tsc   
@@ -15,4 +14,4 @@ npm install
 3) node dist/app xMax yMax rovPosX rovPosY rovCom  
 
 ## Test
-npm run test          -- runs all the test files (*.spec.ts)
+npm run test       // runs all the test files (*.spec.ts)
