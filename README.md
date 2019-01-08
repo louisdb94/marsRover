@@ -3,15 +3,15 @@
 # How to run
 open the project in terminal and run following commands:
 
-1) // typescript conververter for all ts files
-tsc   
+1) tsc                // typescript converter for all ts files
+  
 
-2) // run the main file       
-node dist/app      
+2) node dist/app      // run the main file       
+      
 
-3) run with CLI parameters
-//   eg: node dist/app 5 5 1 2 'N'
-node dist/app xMax yMax rovPosX rovPosY rovCom  
+3) node dist/app xMax yMax rovPosX rovPosY rovCom  
+        // run with CLI parameters
+        //   eg: node dist/app 5 5 1 2 'N'
 
 ## Test
 npm run test       // runs all the test files (*.spec.ts)
