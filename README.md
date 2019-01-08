@@ -3,10 +3,10 @@
 # How to run
 open the project in terminal and run following commands:
 
-1) tsc                // typescript converter for all ts files
+1) tsc                <!-- typescript converter for all ts files -->  
   
 
-2) node dist/app      // run the main file       
+2) node dist/app      <!-- run the main file -->        
       
 
 3) node dist/app xMax yMax rovPosX rovPosY rovCom  
