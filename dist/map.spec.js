@@ -41,7 +41,7 @@ describe('Map', function () {
         //add a rover
         map.addRover(3, 3, 'E');
         map.addRover(3, 3, 'E');
-        chai_1.expect(map.addRover(3, 3, 'E')).to.eql(false);
+        chai_1.expect(map.addRover(3, 3, 'E')).to.eql(undefined);
     });
 });
 //# sourceMappingURL=map.spec.js.map

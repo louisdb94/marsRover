@@ -13,13 +13,27 @@ var Map = /** @class */ (function () {
             return false;
         }
         if (this.rovers) {
-            for (var _i = 0, _a = this.rovers; _i < _a.length; _i++) {
-                var rover = _a[_i];
-                if (rover.pos.x == x && rover.pos.y == y) {
+            //For loop
+            // for(let rover of this.rovers){
+            //   if(rover.pos.x == x && rover.pos.y == y){
+            //     console.log("A Rover is already standing on this position.")
+            //     return false;
+            //   }
+            // }
+            //ForEach
+            // this.rovers.forEach((item) => {
+            //   if(item.pos.x == x && item.pos.y == y){
+            //     console.log("A Rover is already standing on this position.")
+            //     return false;
+            //   }
+            // });
+            //Filter
+            /** Returns undefined if array is empty */
+            this.rovers.filter(function (item) {
+                if (item.pos.x == x && item.pos.y == y) {
                     console.log("A Rover is already standing on this position.");
-                    return false;
                 }
-            }
+            });
         }
         this.rover = new marsRover_1.default(x, y, compass);
         console.log(this.rover.getPosition());
@@ -27,21 +41,31 @@ var Map = /** @class */ (function () {
         console.log("Rover added");
     };
     Map.prototype.execute = function (c) {
+        var _this = this;
         var char = c.split('', c.length);
-        for (var _i = 0, char_1 = char; _i < char_1.length; _i++) {
-            var cmd = char_1[_i];
-            if (this.rover) {
-                this.rover.execute(this.xMax, this.yMax, cmd);
+        // for(let cmd of char){
+        //   if(this.rover){
+        //     this.rover.execute(this.xMax, this.yMax, cmd);
+        //   }
+        // }
+        //Map
+        char.map(function (cmd) {
+            if (_this.rover) {
+                _this.rover.execute(_this.xMax, _this.yMax, cmd);
             }
-        }
+        });
     };
     Map.prototype.print = function () {
         if (this.rovers) {
-            for (var _i = 0, _a = this.rovers; _i < _a.length; _i++) {
-                var rover = _a[_i];
+            // for(let rover of this.rovers){
+            //   console.log(rover.pos.x, rover.pos.y, rover.compass);
+            //   // return rover.pos.x, rover.pos.y, rover.compass;
+            //
+            // }
+            //ForEach
+            this.rovers.forEach(function (rover) {
                 console.log(rover.pos.x, rover.pos.y, rover.compass);
-                return rover.pos.x, rover.pos.y, rover.compass;
-            }
+            });
         }
     };
     Map.prototype.getRoverPos = function () {

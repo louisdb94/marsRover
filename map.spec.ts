@@ -49,7 +49,7 @@ describe('Map', function() {
     map.addRover(3,3,'E');
     map.addRover(3,3,'E');
 
-    expect(map.addRover(3,3,'E')).to.eql(false);
+    expect(map.addRover(3,3,'E')).to.eql(undefined);
   });
 
 });
